@@ -1,11 +1,11 @@
-.App{
+.App {
   min-height: 100vh;
   max-width: 1200px;
   margin: auto;
   padding: 10px 10px;
 }
 
-header{
+header {
   min-height: 70px;
   display: flex;
   align-items: center;
@@ -17,24 +17,24 @@ header{
   box-shadow: var(--box-shadow);
 }
 
-header .logo{
+header .logo {
   display: flex;
   align-items: center;
 }
 
-header .logo img{
+header .logo img {
   max-width: 40px;
   cursor: pointer;
 }
 
-header .logo span{
+header .logo span {
   font-size: 22px;
   margin-left: 7px;
   cursor: pointer;
   color: #525252;
 }
 
-header .themeSelector span{
+header .themeSelector span {
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -44,7 +44,7 @@ header .themeSelector span{
   border: 1px solid #dfdfdf;
 }
 
-header .themeSelector .activeTheme{
+header .themeSelector .activeTheme {
   height: 30px;
   width: 30px;
 }
@@ -58,12 +58,12 @@ header .themeSelector .activeTheme{
   box-shadow: var(--box-shadow);
 }
 
-.addTask form{
+.addTask form {
   display: flex;
   gap: 7px;
 }
 
-.addTask form input{
+.addTask form input {
   flex-grow: 1;
   padding: 5px 5px;
   border: 1px solid #eaeaea;
@@ -71,11 +71,11 @@ header .themeSelector .activeTheme{
   font-size: 18px;
 }
 
-.addTask form input:focus{
+.addTask form input:focus {
   outline: 0.5px solid #eaeaea;
 }
 
-.addTask form button{
+.addTask form button {
   background-color: #03ba5c;
   color: #FFFFFF;
   border: none;
@@ -85,11 +85,11 @@ header .themeSelector .activeTheme{
   font-size: 18px;
 }
 
-.addTask form button:hover{
+.addTask form button:hover {
   background-color: #5bd495;
 }
 
-.showTask{
+.showTask {
   padding: 20px 15px;
   border-radius: 5px;
   background-color: #FFFFFF;
@@ -97,24 +97,24 @@ header .themeSelector .activeTheme{
   box-shadow: var(--box-shadow);
 }
 
-.showTask div.head{
+.showTask div.head {
   padding: 10px 0px 20px 0px;
   border-bottom: 1px solid #dfdfdf;
   display: flex;
   align-items: center;
 }
 
-.showTask div.head div{
+.showTask div.head div {
   flex-grow: 1;
 }
 
-.showTask .title{
+.showTask .title {
   font-size: 18px;
   font-weight: 600;
   user-select: none;
 }
 
-.showTask .count{
+.showTask .count {
   background-color: #dfdfdf;
   color: #525252;
   padding: 5px 10px;
@@ -123,7 +123,7 @@ header .themeSelector .activeTheme{
   user-select: none;
 }
 
-.showTask .clearAll{
+.showTask .clearAll {
   background-color: #0f6af3;
   color: #FFFFFF;
   padding: 5px 10px;
@@ -133,11 +133,11 @@ header .themeSelector .activeTheme{
   font-size: 16px;
 }
 
-.showTask .clearAll:hover{
+.showTask .clearAll:hover {
   background-color: #1061db;
 }
 
-.showTask ul{
+.showTask ul {
   margin: 30px 5px 20px 5px;
   display: flex;
   flex-direction: row;
@@ -146,7 +146,7 @@ header .themeSelector .activeTheme{
   gap: 15px;
 }
 
-.showTask li{
+.showTask li {
   padding: 15px 10px;
   border-bottom: 1px solid #e5e5e5;
   display: flex;
@@ -157,40 +157,107 @@ header .themeSelector .activeTheme{
   border-left: 5px solid #1365dfaf;
 }
 
-.showTask li:hover{
+.showTask li:hover {
   background-color: #f8f8f8;
 }
 
-.showTask li p{
+.showTask li p {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-.showTask li .name{
+.showTask li .name {
   font-size: 18px;
   padding-bottom: 5px;
 }
 
-.showTask li .time{
+.showTask li .time {
   font-size: 12px;
   color: #737373;
 }
 
-.showTask i.bi-pencil-square{
+.showTask i.bi-pencil-square {
   font-size: 18px;
   color: #1363DF;
   cursor: pointer;
 }
 
-.showTask i.bi-trash{
+.showTask i.bi-trash {
   font-size: 18px;
   color: #D82148;
   cursor: pointer;
 }
 
 @media only screen and (max-width: 800px) {
-  .showTask li{
+  .showTask ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .showTask li {
     width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  header .logo span {
+    font-size: 20px;
+  }
+
+  header .themeSelector span {
+    margin-left: 10px;
+  }
+
+  .addTask {
+    max-width: 90%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header .logo span {
+    font-size: 18px;
+  }
+
+  header .themeSelector span {
+    height: 18px;
+    width: 18px;
+  }
+
+  header .themeSelector .activeTheme {
+    height: 25px;
+    width: 25px;
+  }
+
+  .addTask form input {
+    font-size: 16px;
+  }
+
+  .addTask form button {
+    font-size: 16px;
+  }
+
+  .showTask .title {
+    font-size: 16px;
+  }
+
+  .showTask .clearAll {
+    font-size: 14px;
+  }
+
+  .showTask .count {
+    font-size: 14px;
+  }
+
+  .showTask li .name {
+    font-size: 16px;
+  }
+
+  .showTask li .time {
+    font-size: 10px;
   }
 }
